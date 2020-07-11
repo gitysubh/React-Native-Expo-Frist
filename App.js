@@ -10,6 +10,10 @@ import {
   Platform,
   StatusBar,
 } from "react-native";
+import {
+  useDimensions,
+  useDeviceOrientation,
+} from "@react-native-community/hooks";
 
 export default function App() {
   const [isImageShown, setImamgeDisplayState] = useState(true);
@@ -31,6 +35,8 @@ export default function App() {
     ]);
   };
 
+  const { landscape } = useDeviceOrientation();
+  console.log(landscape);
   return (
     <SafeAreaView style={styles.container}>
       <Text>Hello fucking world. How are you</Text>
