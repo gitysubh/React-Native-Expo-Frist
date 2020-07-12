@@ -1,14 +1,17 @@
 import React from 'react';
 import { StyleSheet, View, Platform, StatusBar, Image } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+
+import color from '../config/color.json';
 
 const ViewImageScreen = () => {
     return (
         <View styles={styles.container}>
             <View style={styles.buttonContainer}>
-                <View style={{ ...styles.buttons, backgroundColor: "#fc5c65" }}></View>
-                <View style={{ ...styles.buttons, backgroundColor: "#4ECDC4" }}></View>
+                <MaterialCommunityIcons name="close" size={30} color={color.white} />
+                <MaterialCommunityIcons name="trash-can-outline" size={30} color={color.white} />
             </View>
-            <Image resizeMode="contain" style={styles.image} source={require("../assets/chair.jpg")} />
+            <Image style={styles.image} source={require("../assets/chair.jpg")} />
         </View>
     );
 }
@@ -16,23 +19,23 @@ const ViewImageScreen = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#000000"
+        backgroundColor: color.black
     },
     buttonContainer: {
         width: "90%",
+        height: 50,
         alignSelf: "center",
         flexDirection: "row",
         justifyContent: "space-between",
-        top: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-        position: "absolute"
-    },
-    buttons: {
-        height: 50,
-        width: 50
+        top: (Platform.OS === "android" ? StatusBar.currentHeight : 0) + 5,
+        position: "absolute",
+        zIndex: 1
     },
     image: {
         height: "100%",
-        width: "100%"
+        width: "100%",
+        resizeMode: "contain",
+        backgroundColor: color.black
     }
 })
 

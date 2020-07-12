@@ -21,12 +21,11 @@ const styles = StyleSheet.create({
     backgroundColor: color.white,
     borderRadius: 20,
     marginVertical: 20,
+    overflow: "hidden",
   },
   image: {
     width: "100%",
     height: 200,
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
     resizeMode: "cover",
   },
   infoContainer: {
@@ -38,7 +37,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   subtitle: {
-    color: color.secondaryColor,
+    color: color.secondary,
     fontSize: 15,
   },
 });

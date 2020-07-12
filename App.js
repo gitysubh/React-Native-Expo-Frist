@@ -18,6 +18,7 @@ class App extends Component {
       <SafeAreaView style={styles.container}>
         <CardList />
         {/* <ViewImageScreen /> */}
+        {/* <WelcomeScreen /> */}
       </SafeAreaView>
     );
   }
@@ -26,7 +27,7 @@ export default App;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "rgba(0,0,0,0)",
+    // backgroundColor: "rgba(0,0,0,0)",
     color: "#FFFFFF",
     flex: 1,
   },
