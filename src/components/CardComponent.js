@@ -1,13 +1,15 @@
 import React from "react";
-import { View, Image, StyleSheet } from "react-native";
+import { View, Image, StyleSheet, Text } from "react-native";
+
+import color from "../config/color.json";
 
 const Card = ({ title, subtitle, image }) => {
   return (
-    <View>
-      <Image source={image} />
-      <View>
-        <Text>{title}</Text>
-        <Text>{subtitle}</Text>
+    <View style={styles.container}>
+      <Image source={image} style={styles.image} />
+      <View style={styles.infoContainer}>
+        <Text style={styles.title}>{title}</Text>
+        <Text style={styles.subtitle}>{subtitle}</Text>
       </View>
     </View>
   );
@@ -15,20 +17,30 @@ const Card = ({ title, subtitle, image }) => {
 
 const styles = StyleSheet.create({
   container: {
-    width: "100%",
-    padding: 10,
+    width: "90%",
+    backgroundColor: color.white,
+    borderRadius: 20,
+    marginVertical: 20,
   },
   image: {
     width: "100%",
-    height: 100,
-    borderRadius: 10,
-    resizeMode: "contain",
+    height: 200,
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    resizeMode: "cover",
+  },
+  infoContainer: {
+    padding: 15,
   },
   title: {
     fontWeight: "bold",
-    fontSize: "20",
+    fontSize: 15,
+    marginVertical: 10,
   },
-  subtitle: {},
+  subtitle: {
+    color: color.secondaryColor,
+    fontSize: 15,
+  },
 });
 
 export default Card;
