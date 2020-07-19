@@ -8,17 +8,14 @@ import {
   Platform,
 } from "react-native";
 
-import WelcomeScreen from "./src/screens/welcomeScreen";
-import ViewImageScreen from "./src/screens/ViewImageScreen";
-import CardList from "./src/screens/CardListScreen";
+import colors from "./src/config/color.json";
+import ListingScreen from "./src/screens/ListingScreen";
 
 class App extends Component {
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <CardList />
-        {/* <ViewImageScreen /> */}
-        {/* <WelcomeScreen /> */}
+        <ListingScreen />
       </SafeAreaView>
     );
   }
@@ -27,8 +24,9 @@ export default App;
 
 const styles = StyleSheet.create({
   container: {
-    // backgroundColor: "rgba(0,0,0,0)",
+    backgroundColor: colors.grey,
     color: "#FFFFFF",
     flex: 1,
+    paddingHorizontal: 5,
   },
 });

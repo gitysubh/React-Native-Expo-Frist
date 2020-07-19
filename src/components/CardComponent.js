@@ -17,10 +17,10 @@ const Card = ({ title, subtitle, image }) => {
 
 const styles = StyleSheet.create({
   container: {
-    width: "90%",
+    width: "100%",
     backgroundColor: color.white,
     borderRadius: 20,
-    marginVertical: 20,
+    marginVertical: 10,
     overflow: "hidden",
   },
   image: {
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
   },
   infoContainer: {
-    padding: 15,
+    padding: 10,
   },
   title: {
     fontWeight: "bold",
