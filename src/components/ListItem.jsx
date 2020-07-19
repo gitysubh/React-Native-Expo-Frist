@@ -1,8 +1,9 @@
 import React from 'react';
-import { View, StyleSheet, Text, Image } from 'react-native';
+import { View, StyleSheet, Image } from 'react-native';
 import Constants from "expo-constants";
 
 import colors from "../config/color.json";
+import AppText from "../components/AppText";
 
 const ListItem = ({ ImageComponent, title, subtitle }) => {
     return (
@@ -10,8 +11,8 @@ const ListItem = ({ ImageComponent, title, subtitle }) => {
             {ImageComponent}
 
             <View style={styles.detailsContainer}>
-                <Text style={styles.title}>{title}</Text>
-                {subtitle && <Text style={styles.subtitle}>{subtitle}</Text>}
+                <AppText style={styles.title}>{title}</AppText>
+                {subtitle && <AppText style={styles.subtitle}>{subtitle}</AppText>}
             </View>
         </View>
     );
@@ -30,14 +31,14 @@ const styles = StyleSheet.create({
         marginLeft: 15
     },
     title: {
-        color: colors.black,
+        //color: colors.black,
         fontWeight: "bold",
-        fontSize: 16,
+        //fontSize: 16,
         // marginBottom: 5
     },
     subtitle: {
         color: colors.deepGrey,
-        fontSize: 15
+        fontSize: 16
     }
 
 })
